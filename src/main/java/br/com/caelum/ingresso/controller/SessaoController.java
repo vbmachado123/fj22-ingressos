@@ -60,6 +60,8 @@ public class SessaoController {
 			return new ModelAndView("redirect:/admin/sala/" + form.getSalaId() + "/sessoes");
 		}
 		
+		result.rejectValue("horario", "error.sessionConflict", 
+				"Conflito com sessões existentes! Escolha outro horário");
 		return form(form.getSalaId(), form);
 	}
 	
