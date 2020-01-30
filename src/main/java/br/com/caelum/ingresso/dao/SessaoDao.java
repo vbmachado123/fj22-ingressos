@@ -13,7 +13,7 @@ import br.com.caelum.ingresso.model.Sessao;
 
 @Repository
 public class SessaoDao {
-
+	
 	@PersistenceContext
 	private EntityManager manager;
 	
@@ -33,5 +33,9 @@ public class SessaoDao {
 				Sessao.class)
 				.setParameter("filme", filme)
 				.getResultList();
+	}
+	
+	public Sessao findOne(Integer id) {
+		return manager.find(Sessao.class, id);
 	}
 }

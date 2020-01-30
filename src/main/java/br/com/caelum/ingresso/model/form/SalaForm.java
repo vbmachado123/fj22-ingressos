@@ -33,7 +33,17 @@ public class SalaForm {
         this.preco = sala.getPreco();
     }
 
-    public Integer getSalaId() {
+    
+    
+    public BigDecimal getPreco() {
+		return preco;
+	}
+
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
+	}
+
+	public Integer getSalaId() {
         return salaId;
     }
 
